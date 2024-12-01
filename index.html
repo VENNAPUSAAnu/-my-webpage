@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Boxes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <header class="interactive-header">
+        <h1 class="title"> Interactive Boxes</h1>
+        <!-- <p class="subtitle">Click on a box to reveal size and color options.</p> -->
+      </header>
+      
+
+  <main class="container">
+    <!-- Box 1 -->
+    <section class="box" aria-expanded="false" onclick="toggleBox('box1')">
+        <label class="box-label">
+            <input type="radio" name="boxSelection" value="box1" onclick="stopPropagation(event)">      Box 1
+          </label>
+      <div class="content" id="box1" hidden>
+        <label for="size1">Size:</label>
+        <select id="size1" onclick="stopPropagation(event)">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+
+        <label for="color1">Color:</label>
+        <select id="color1" onclick="stopPropagation(event)">
+          <option value="Red" style="color: crimson;">Red</option>
+          <option value="Blue" style="color: blue;">Blue</option>
+          <option value="Green" style="color: aquamarine;">Green</option>
+          <option value="Yellow" style="color: darkkhaki;">Yellow</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Box 2 -->
+    <section class="box" aria-expanded="false" onclick="toggleBox('box2')">
+        <div class="tag">MOST POPULAR</div>
+        <label class="box-label">
+            <input type="radio" name="boxSelection" value="box1" onclick="stopPropagation(event)">      Box 2
+          </label>
+      <div class="content" id="box2" hidden>
+        <label for="size2">Size:</label >
+        <select id="size2" onclick="stopPropagation(event)">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+
+        <label for="color2">Color:</label>
+        <select id="color2" onclick="stopPropagation(event)">
+            <option value="Red" style="color: crimson;">Red</option>
+            <option value="Blue" style="color: blue;">Blue</option>
+            <option value="Green" style="color: aquamarine;">Green</option>
+            <option value="Yellow" style="color: darkkhaki;">Yellow</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Box 3 -->
+    <section class="box" aria-expanded="false" onclick="toggleBox('box3')">
+        <label class="box-label">
+            <input type="radio" name="boxSelection" value="box1" onclick="stopPropagation(event)">      Box 3
+          </label>
+      <div class="content" id="box3" hidden>
+        <label for="size3">Size:</label>
+        <select id="size3" onclick="stopPropagation(event)">
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+
+        <label for="color3">Color:</label>
+        <select id="color3" onclick="stopPropagation(event)">
+            <option value="Red" style="color: crimson;">Red</option>
+            <option value="Blue" style="color: blue;">Blue</option>
+            <option value="Green" style="color: aquamarine;">Green</option>
+            <option value="Yellow" style="color: darkkhaki;">Yellow</option>
+        </select>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer>
+    
+    <button id="cartButton" onclick="viewCart()">Add To Cart</button>
+    <p style="margin: auto;">&copy; 2024 Interactive Boxes. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
